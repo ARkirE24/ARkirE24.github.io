@@ -1,34 +1,57 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
   <head>
     <meta charset="UTF-8">
     <title>Calculadora</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body>
-    <div class="calculator">
-      <div class="display">
-        <span id="result">0</span>
+    <body>
+      <!--https://play.tailwindcss.com/swcVWnbUd5?size=434x763&file=css-->
+      
+      
+      <div class="imagen">
+        <div class="capa-imagen">
+          <div class="calculadora">
+
+            <div class="panel ">
+              <span class="texto-panel" id="texto">0</span>
+            </div>
+
+            <div class="tecla">
+              <div class="fila1">
+                <button class="tecla-blanca" onclick="funcionBorrarTodo()"><div class="color-negro">AC</div></button>
+                <button class="tecla-blanca" onclick="funcionBorrar()"><div class="color-negro">DE</div></button>
+                <button class="tecla-blanca" onclick="funcionTeclaNumero('.')"><div class="color-negro">.</div></button>
+                <button class="tecla-azul" onclick="funcionTeclaNumero(' / ')"><div class="color-blanco">/</div></button>
+              </div>
+              <div class="fila2">
+                <button class="tecla-ploma" onclick="funcionTeclaNumero('7')"><div class="color-blanco">7</div></button>
+                <button class="tecla-ploma" onclick="funcionTeclaNumero('8')"><div class="color-blanco">8</div></button>
+                <button class="tecla-ploma" onclick="funcionTeclaNumero('9')"><div class="color-blanco">9</div></button>
+                <button class="tecla-azul" onclick="funcionTeclaNumero(' * ')"><div class="color-blanco">*</div></button>
+              </div>
+              <div class="fila3">
+                <button class="tecla-ploma" onclick="funcionTeclaNumero('4')"><div class="color-blanco">4</div></button>
+                <button class="tecla-ploma" onclick="funcionTeclaNumero('5')"><div class="color-blanco">5</div></button>
+                <button class="tecla-ploma" onclick="funcionTeclaNumero('6')"><div class="color-blanco">6</div></button>
+                <button class="tecla-azul" onclick="funcionTeclaNumero(' - ')"><div class="color-blanco">-</div></button>
+              </div>
+              <div class="fila4">
+                <button class="tecla-ploma" onclick="funcionTeclaNumero('1')"><div class="color-blanco">1</div></button>
+                <button class="tecla-ploma" onclick="funcionTeclaNumero('2')"><div class="color-blanco">2</div></button>
+                <button class="tecla-ploma" onclick="funcionTeclaNumero('3')"><div class="color-blanco">3</div></button>
+                <button class="tecla-azul" onclick="funcionTeclaNumero(' + ')"><div class="color-blanco">+</div></button>
+              </div>
+              <div class="fila5">
+                <button class="tecla-blanca" onclick="funcionTeclaNumero('00')"><div class="color-negro">00</div></button>
+                <button class="tecla-ploma" onclick="funcionTeclaNumero('0')"><div class="color-blanco">0</div></button>
+                <button class="tecla-azul-grande" onclick="funcionIgual()"><div class="color-blanco">=</div></button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="keys">
-        <button class="operator" value="+">+</button>
-        <button class="operator" value="-">-</button>
-        <button class="operator" value="*">&times;</button>
-        <button class="operator" value="/">&divide;</button>
-        <button value="7">7</button>
-        <button value="8">8</button>
-        <button value="9">9</button>
-        <button value="4">4</button>
-        <button value="5">5</button>
-        <button value="6">6</button>
-        <button value="1">1</button>
-        <button value="2">2</button>
-        <button value="3">3</button>
-        <button value="0">0</button>
-        <button id="clear">C</button>
-        <button id="calculate">=</button>
-      </div>
-    </div>
     <script src="script.js"></script>
   </body>
 </html>
